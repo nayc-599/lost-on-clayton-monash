@@ -10,6 +10,4 @@ locations = [
     {"name": "Monash Sport", "lat": -37.9128915, "lon": 145.1364703},
     {"name": "Science Lectures", "lat": -37.9104879, "lon": 145.1308102},
     {"name": "Senior Physics", "lat": -37.9102279, "lon": 145.1308254},
-
-
 ]
