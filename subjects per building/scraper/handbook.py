@@ -2,21 +2,22 @@ from __future__ import annotations
 
 import requests
 from bs4 import BeautifulSoup
+from typing import Optional, Dict
 
 # handbook url
 sample_url = "https://handbook.monash.edu/2026/units/{UNITCODE}?year=2026"
 
 # we want the page for the unit
-def fetch_unit_page(unitcode: str) -> BeautifulSoup|None:
+def fetch_unit_page(unitcode: str) -> Optional[BeautifulSoup]:
     url = sample_url.format(UNITCODE=unitcode.upper())
     resp = requests.get(url, timeout=10)
     if resp.status_code != 200:
         print(f"[handbook] {unitcode}: HTTP {resp.status_code}")
         return None
-    return BeautifulSoup(resp.text, "htmp.parser")
+    return BeautifulSoup(resp.text, "html.parser")
 
 # extracting unitname, unitcode, faculty from the Handbook page
-def parse_unit(soup: BeautifulSoup, unitcode: str) -> dict | None:
+def parse_unit(soup: BeautifulSoup, unitcode: str) -> Optional[str]:
     # parsing for unitcode
     # <title> FIT1058 - Foundations of computing - Monash Univeristy </title>
     h1 = soup.title.string()
