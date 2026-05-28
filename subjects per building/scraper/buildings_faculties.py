@@ -21,4 +21,9 @@ FACULTY_TO_BUILDINGS: dict[str, list[str]] = {
     "Law": ["Menzies", "LTB"],
     
     "Medicine, Nursing and Health Sciences": ["BLTB", "Hargrave Library", "Monash Sport", "Science Lectures"]
-} 
+}
+
+# returns buildings for each faculty
+def buildings_for_faculty(faculty: str) -> list[str]:
+    faculty = (faculty or "").strip()
+    return FACULTY_TO_BUILDINGS.get(faculty, [])
