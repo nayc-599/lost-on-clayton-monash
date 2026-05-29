@@ -1,3 +1,5 @@
+'''this puts together buildings_faculties.py and handbook.py files to build a dataset 
+that can be used to show where the possible buildings for each faculty would be'''
 from __future__ import annotations
 
 import csv

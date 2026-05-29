@@ -1,3 +1,5 @@
+# this is the handbook scraper, it goes onto the handbook website and gets unitname, unitcode and faculty information about a specific unit
+
 from __future__ import annotations
 
 import requests

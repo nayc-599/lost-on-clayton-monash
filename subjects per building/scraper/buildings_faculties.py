@@ -1,4 +1,4 @@
-# this file maps each building with the faculties that building accomodates for
+# this file maps each building with the faculties that building accomodates for, makes it easy for the webpage scraper
 
 from __future__ import annotations
 
